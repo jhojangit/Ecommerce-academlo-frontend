@@ -1,0 +1,121 @@
+.products__container-filterByName{
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid rgb(158, 155, 155);
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+.products__container{
+    margin-top: 130px;
+    position: relative;
+    
+}
+
+
+
+
+.products__filters-section{
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1000;
+    height: 100vh;
+    border-right: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(175, 175, 175);
+    transition: left 500ms ease;
+}
+
+.products__filters-section_show{
+    left: 0%;
+}
+
+.products__menu-close{
+    cursor: pointer;
+    text-align: end;
+}
+
+
+
+.products__filter-btn-show{
+    position: absolute;
+    color: rgb(128, 121, 121);
+    cursor: pointer;
+    padding-left: .4rem;
+    top: -10px;
+    font-weight: bold;
+}
+
+
+/* Filter by price */
+
+.filter__byPrice{
+    border-top: 2px solid rgb(212, 210, 210);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
+    gap: .5rem;
+}
+
+.filter__byprice-title{
+    margin-bottom: .2rem;
+}
+
+
+.filter__byPrice-label{
+    padding-top: .6rem;
+    color: rgb(96, 97, 99) ;
+    font-weight: bold;
+}
+
+.filter__byPrice-input{
+    padding: .5rem;
+    border: 1px solid rgb(197, 193, 193) ;
+    border-radius: .5rem;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.filter__byPrice-btn{
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: 2rem;
+    border: none ;
+    background-color: var(--redMain);
+    color: aliceblue;
+    margin-top: 0.3rem;
+}
+
+.filter__byPrice-btn:hover{
+    background-color: var(--redMainHover);
+}
+
+
+
+
+
+
+/* Filter by category */
+
+.filter__byCategory-ul{
+    list-style: none;
+    cursor: pointer;
+    padding-top: 1rem;
+    border-top: 2px solid rgb(212, 210, 210);}
+
+
+.filter__byCategory-li{
+    padding-top: 1rem;
+    color: rgb(121, 124, 126);
+    font-size: large;
+}

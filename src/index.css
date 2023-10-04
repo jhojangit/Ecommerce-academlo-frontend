@@ -1,0 +1,16 @@
+:root{
+    --redMain :#f85555;
+    --redMainHover :#f86767;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #363636;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
