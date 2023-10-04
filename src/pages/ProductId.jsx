@@ -10,7 +10,7 @@ import SimilarProducts from '../components/home/productId/SimilarProducts'
 const ProductId = () => {
     const {id} = useParams()
 
-    const url = `http://localhost:8080/products/${id}`
+    const url = `https://ecommerce-academlo-backend.onrender.com/products/${id}`
 
     const [product, getProductById]  = useFetch(url)
 

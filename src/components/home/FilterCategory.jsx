@@ -9,7 +9,7 @@ const FilterCategory = () => {
 
     const dispatch = useDispatch()
 
-    const url = "http://localhost:8080categories"
+    const url = "https://ecommerce-academlo-backend.onrender.com/categories"
     const [categories, getAllCategories] = useFetch(url)
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const FilterCategory = () => {
 
 
     const handleClickCategories = (id) => {
-        const url = `http://localhost:8080products?categoryId=${id}`
+        const url = `https://ecommerce-academlo-backend.onrender.com/products?categoryId=${id}`
         dispatch(getAllProductsThunk(url))
     }
 

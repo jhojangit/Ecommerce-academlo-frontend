@@ -16,7 +16,7 @@ export const { setCartGlobal } = cartSlice.actions
 export default cartSlice.reducer
 
 export const getAllProductsCartThunk = () => dispatch => {
-    const url = 'http://localhost:8080/cart'
+    const url = 'https://ecommerce-academlo-backend.onrender.com/cart'
     axios.get(url, getConfigToken())
         .then(res => dispatch(setCartGlobal(res.data)))
         .catch(err => console.log(err))

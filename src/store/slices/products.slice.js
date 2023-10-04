@@ -17,7 +17,7 @@ export default productsSlice.reducer
 
 
 
-export const getAllProductsThunk = (url = `http://localhost:8080/products` ) => dispatch =>{
+export const getAllProductsThunk = (url = `https://ecommerce-academlo-backend.onrender.com/products` ) => dispatch =>{
     axios(url)
     .then(res => dispatch(setProductsGlobal(res.data)))
 

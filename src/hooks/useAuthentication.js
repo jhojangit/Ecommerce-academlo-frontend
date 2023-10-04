@@ -8,7 +8,7 @@ const useAuthentication = () => {
 
 
     const createNewUser = data =>{
-        const url = `http://localhost:8080/users`
+        const url = `https://ecommerce-academlo-backend.onrender.com/users`
         axios.post(url, data)
         .then(res => console.log(res.data))
 
@@ -19,7 +19,7 @@ const useAuthentication = () => {
 
 
     const loginUser = data =>{
-        const url = `http://localhost:8080/users/login`
+        const url = `https://ecommerce-academlo-backend.onrender.com/users/login`
         axios.post(url, data)
         .then(res => {
             console.log(res.data)

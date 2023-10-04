@@ -13,7 +13,7 @@ const usePurchases = () =>{
     const dispatch = useDispatch()
 
 
-    const url = `http://localhost:8080/purchases`
+    const url = `https://ecommerce-academlo-backend.onrender.com/purchases`
 
 
     const buyThisCart = () =>{

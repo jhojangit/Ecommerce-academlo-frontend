@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 const SimilarProducts = ({ product }) => {
 
-    const url = `http://localhost:8080/products?categoryId=${product?.categoryId}`
+    const url = `https://ecommerce-academlo-backend.onrender.com/products?categoryId=${product?.categoryId}`
 
     const [filterProducts, getProductByCategory] = useFetch(url)
 

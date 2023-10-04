@@ -11,7 +11,7 @@ const useCrudCart = () =>{
 
 
     const addProductToCart = data =>{
-        const url = "http://localhost:8080/cart"
+        const url = "https://ecommerce-academlo-backend.onrender.com/cart"
         axios.post(url, data, getConfigToken())
         .then(res =>{
             console.log(res.data)
@@ -27,7 +27,7 @@ const useCrudCart = () =>{
 
     const deleteProductsFromCart = id =>{
         
-        const url = `http://localhost:8080/cart/${id}`
+        const url = `https://ecommerce-academlo-backend.onrender.com/cart/${id}`
         axios.delete(url, getConfigToken())
         .then(res =>{
             console.log(res.data)
@@ -42,7 +42,7 @@ const useCrudCart = () =>{
 
 
     const updateProductInCart = (id, data) =>{
-        const url = `http://localhost:8080/cart/${id}`
+        const url = `https://ecommerce-academlo-backend.onrender.com/cart/${id}`
         axios.put(url, data, getConfigToken())
         .then(res =>{
             console.log(res.data)
