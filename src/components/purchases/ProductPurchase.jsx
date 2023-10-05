@@ -1,12 +1,13 @@
 import "../../pages/purchases.css"
 import LoaderSkeleton from "../loaderSkeleton/LoaderSkeleton"
+import Loading from "../loading/Loading"
 
 
 const ProductPurchase = ({prodpurchase}) => {
 
   return (
 
-    !prodpurchase? <LoaderSkeleton/> :
+    
         <article className="prodpurchase__container">
             <div className="prodpurchase__img-div">
               <img className="prodpurchase__img" src={prodpurchase.product.images[0].url} alt="" />

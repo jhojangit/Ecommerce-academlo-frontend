@@ -31,9 +31,8 @@ const Header = () => {
                 </>
                   :
               <>
-
+                  <li className='navbar__li'> <Link to="/">Home</Link>  </li>
                   <li className='navbar__li'> <Link to="/logOut">Log out</Link>  </li>
-                  <li className='navbar__li'> <Link to="/register">Register</Link>  </li>
                   <li className='navbar__li'> <Link to="/Cart">Cart</Link>  </li>
                   <li className='navbar__li'> <Link to="/purchases">Purchases</Link>  </li>
               </>

@@ -19,6 +19,7 @@
     gap: .5rem;
     border: 1px solid rgb(219, 219, 219);
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .product__header {

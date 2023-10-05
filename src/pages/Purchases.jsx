@@ -21,7 +21,7 @@ const Purchases = () => {
         <h2 className='purchases__title'>Purchases</h2>
             <div className='purchases__products-container'>
                 {
-                !purchases?<LoaderSkeleton/>:
+                !purchases?<Loading/>:
                     purchases?.map( prodpurchase =>(
                         <ProductPurchase
                             key={prodpurchase.id}

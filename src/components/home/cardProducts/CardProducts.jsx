@@ -47,7 +47,7 @@ const CardProducts = ({ product }) => {
 
             <div className='product__price'>
                 <span className='product__price-label' >Price </span>
-                <span className='product__price-value'>{product.price}</span>
+                <span className='product__price-value'>{product?.price.toLocaleString('es-Co')}</span>
                 <button onClick={handleBtnClick} className='product__btn'>
                     <i className='bx bx-cart-add bx-sm product__btn-title'></i>
                 </button>
