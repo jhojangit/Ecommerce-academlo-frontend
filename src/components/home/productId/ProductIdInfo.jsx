@@ -59,7 +59,7 @@ const ProductIdInfo = ({ product }) => {
 
 
                     <span className='product__info-price-label' >Price </span>
-                    <span className='product__info-price-number'>$ {product?.price}</span>
+                    <span className='product__info-price-number'>$ {product?.price.toLocaleString('es-Co')}</span>
                 
 
                 <span className='product__info-quantity-text'>Quantity</span>

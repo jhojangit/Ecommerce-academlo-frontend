@@ -23,7 +23,7 @@ const SimilarProducts = ({ product }) => {
     return (
         <section >
             <h2 style={{color:"var(--redMain)", marginLeft:80 }}>Discover Similar Products</h2>
-            <div className='products__container' style={{display:"flex", flexDirection:"row", gap:"1rem", marginBottom:"2rem"}}>
+            <div className='products__container' style={{display:"flex", flexDirection:"row", gap:"1rem", margin:"1rem 1rem 2rem 1rem",justifyContent:"center"}}>
                 {
                     filterProducts?.map(prod => {
                         if(product.id !== prod.id){
