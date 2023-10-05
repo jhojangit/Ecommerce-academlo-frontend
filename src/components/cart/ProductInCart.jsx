@@ -1,6 +1,8 @@
 import React from 'react'
 import useCrudCart from '../../hooks/useCrudCart';
 import "./styles/productInCart.css"
+import LoaderSkeleton from '../loaderSkeleton/LoaderSkeleton';
+import Loading from '../loading/Loading';
 
 const ProductInCart = ({ prodCart }) => {
 
@@ -14,6 +16,8 @@ const ProductInCart = ({ prodCart }) => {
     
 
     return (
+
+        
         <article className='prodcart'>
             <header className='prodcart__header'>
                 <img className='prodcart__img' src={prodCart.product.images[0].url} alt="" />

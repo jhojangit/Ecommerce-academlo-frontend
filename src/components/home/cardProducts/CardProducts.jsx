@@ -2,16 +2,24 @@ import React from 'react'
 import "./cardProducts.css"
 import { useNavigate } from 'react-router-dom'
 import useCrudCart from '../../../hooks/useCrudCart'
+import Loading from '../../loading/Loading'
+import LoaderSkeleton from '../../loaderSkeleton/LoaderSkeleton'
 
 
 const CardProducts = ({ product }) => {
+
+    
 
     const navigate = useNavigate()
     const {addProductToCart} = useCrudCart()
 
 
     const handleSelectProduct = () => {
+        
         navigate(`/product/${product.id} `)
+
+        document.documentElement.scrollTop = 0;
+
     }
 
     const handleBtnClick = e => {
@@ -23,6 +31,10 @@ const CardProducts = ({ product }) => {
         addProductToCart(data)
     }
     return (
+        
+        
+        
+        
         <article onClick={handleSelectProduct} className='product'>
             <header className='product__header'>
                 <img className='product__img product__img-1' src={product.images[0].url} alt="" />
@@ -43,6 +55,7 @@ const CardProducts = ({ product }) => {
 
 
         </article>
+    
     )
 }
 

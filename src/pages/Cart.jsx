@@ -5,6 +5,7 @@ import ProductInCart from '../components/cart/ProductInCart'
 import "./cart.css"
 import usePurchases from '../hooks/usePurchases'
 import Login from './Login'
+import LoaderSkeleton from '../components/loaderSkeleton/LoaderSkeleton'
 
 
 
@@ -55,7 +56,10 @@ const Cart = () => {
                 <h2 className='cart__title'>CART</h2>
 
                 <div className='cart__container'>
+
+                    
                     {
+                    !cartGlobal? <LoaderSkeleton/>:
                     cartGlobal?.map(prodCart => (
                         <ProductInCart
                         key={prodCart.id}

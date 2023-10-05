@@ -3,6 +3,7 @@ import "./productInfo.css"
 import SliderImgs from './SliderImgs'
 import { useNavigate } from 'react-router-dom'
 import useCrudCart from '../../../hooks/useCrudCart'
+import LoaderSkeleton from '../../loaderSkeleton/LoaderSkeleton'
 
 const ProductIdInfo = ({ product }) => {
 
@@ -39,6 +40,8 @@ const ProductIdInfo = ({ product }) => {
 
 
     return (
+
+        !product? <LoaderSkeleton/>:
 
         <section className='product__info'> 
 

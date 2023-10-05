@@ -34,13 +34,13 @@ function App() {
       <Header/>
 
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/register' element={<Register/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/logOut' element={<LogOut/>} />
-        <Route path='/product/:id' element={<ProductId/>} />
-        <Route path='/cart' element={<Cart/>} />
-        <Route path='/purchases' element={<Purchases/>} />
+        <Route path='/'             element={<Home/>} />
+        <Route path='/register'     element={<Register/>} />
+        <Route path='/login'        element={<Login/>} />
+        <Route path='/logOut'       element={<LogOut/>} />
+        <Route path='/product/:id'  element={<ProductId/>} />
+        <Route path='/cart'         element={<Cart/>} />
+        <Route path='/purchases'    element={<Purchases/>} />
       </Routes>
 
     </div>

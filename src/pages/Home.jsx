@@ -4,6 +4,7 @@ import CardProducts from '../components/home/cardProducts/CardProducts';
 import FilterCategory from '../components/home/FilterCategory';
 import FilterByPrice from '../components/home/FilterByPrice';
 import "./home.css"
+import Loading from '../components/loading/Loading';
 
 
 
@@ -83,6 +84,8 @@ const Home = () => {
       
       <section className='products__show'>
           {
+            !productFliter? <Loading/>:
+
             productFliter?.map(prod =>(
               <CardProducts 
               key={prod.id}
