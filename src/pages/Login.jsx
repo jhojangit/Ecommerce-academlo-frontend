@@ -12,45 +12,36 @@ const Login = () => {
   const [load, setLoad] = useState(false);
 
   
-  const navigate =useNavigate()
 
   const { loginUser} = useAuthentication()
 
+  const navigate =useNavigate()
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value
 
     const data = { email, password };
-
-    loginUser(data)
-
-    setLoad(true)
-
-    setTimeout(() => {
-      
-      if(localStorage.getItem("token")){
-        navigate("/")
-        window.location.reload(true)  
-      }else{
-        setIsLog(true)
+    
+    try {
+      const send = await loginUser(data);
+      console.log(send);
+      setLoad(false)
+      setIsLog(true)
         
-        setLoad(false)
+      navigate("/");
+      window.location.reload(true);
 
-      }
-    }, 5000);
+
+    } catch (error) {
+      console.error(error);
+      setIsLog(true)
+    }
+
 
   }
 
-
-  setTimeout(() => {
-      
-    if(isLog){
-      
-      setIsLog(false) 
-    }
-  }, 10000);
 
 
 
@@ -77,10 +68,10 @@ const Login = () => {
 
             {
               isLog?
-              <p style={{color:"red", fontSize:"1.5rem"}}>Email or password invalid</p>
-              :
-              <p className='form__login-p' > Don't have an account? <Link className='form__login-link' to="/register">Sign up</Link> </p>
-            }
+                <p style={{color:"red", fontSize:"1.5rem"}}>Email or password invalid</p>
+                :
+                <p className='form__login-p' > Don't have an account? <Link className='form__login-link' to="/register">Sign up</Link> </p>
+            } 
 
           </form>
         </div>
