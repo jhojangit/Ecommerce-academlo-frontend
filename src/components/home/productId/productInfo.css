@@ -67,6 +67,7 @@
 
 .product__info-slider {
     margin: 1rem;
+    margin-right: 0rem;
 }
 
 .product__miga-span {
@@ -235,6 +236,11 @@
     .product__info-brand {
         margin-top: 6rem;
         color: grey;
+    }
+
+    .product__info-slider {
+        margin: 1rem;
+        margin-right: 5rem;
     }
 
 }

@@ -15,7 +15,6 @@ const Header = () => {
   }, [isLog])
 
 
-    
   return (
     <header className='navbar'>
         <h1 className='navbar__title'> <Link to="/" >e-commerce</Link></h1>

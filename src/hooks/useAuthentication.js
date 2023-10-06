@@ -19,7 +19,8 @@ const useAuthentication = () => {
 
 
     const loginUser = data =>{
-        const url = `https://ecommerce-academlo-backend.onrender.com/users/login`
+        const url = "https://ecommerce-academlo-backend.onrender.com/users/login"
+        
         axios.post(url, data)
         .then(res => {
             console.log(res.data)

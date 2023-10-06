@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import useAuthentication from '../hooks/useAuthentication'
 import "./login.css"
 import { Link, useNavigate } from 'react-router-dom'
+import Loading from '../components/loading/Loading'
 
 
 
 const Login = () => {
+
+  const [isLog, setIsLog] = useState(false);
+  const [load, setLoad] = useState(false);
 
   
   const navigate =useNavigate()
@@ -22,13 +26,32 @@ const Login = () => {
 
     loginUser(data)
 
+    setLoad(true)
+
     setTimeout(() => {
       
-      navigate("/")
-      window.location.reload(true)
+      if(localStorage.getItem("token")){
+        navigate("/")
+        window.location.reload(true)  
+      }else{
+        setIsLog(true)
+        
+        setLoad(false)
 
-    }, 2000);
+      }
+    }, 5000);
+
   }
+
+
+  setTimeout(() => {
+      
+    if(isLog){
+      
+      setIsLog(false) 
+    }
+  }, 10000);
+
 
 
 
@@ -49,7 +72,16 @@ const Login = () => {
             </div>
             <button className='form__login-submit' type="submit">Sign in</button>
 
-            <p className='form__login-p' > Don't have an account? <Link className='form__login-link' to="/register">Sign up</Link> </p>
+
+              {load && <Loading/>}
+
+            {
+              isLog?
+              <p style={{color:"red", fontSize:"1.5rem"}}>Email or password invalid</p>
+              :
+              <p className='form__login-p' > Don't have an account? <Link className='form__login-link' to="/register">Sign up</Link> </p>
+            }
+
           </form>
         </div>
 
