@@ -29,6 +29,10 @@ const Login = () => {
     const password = e.target.password.value
 
     const data = { email, password };
+
+    setLoad(true)
+    setIsLog(false)
+
     
     try {
       const send = await loginUser(data);
@@ -37,11 +41,11 @@ const Login = () => {
         
       navigate("/");
       stateStore()
-      //window.location.reload(true);
 
 
     } catch (error) {
       console.error(error);
+      setLoad(false)
       setIsLog(true)
     }
   }
