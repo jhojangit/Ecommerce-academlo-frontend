@@ -7,6 +7,9 @@ import LoaderSkeleton from '../../loaderSkeleton/LoaderSkeleton'
 
 const ProductIdInfo = ({ product }) => {
 
+    const [addProduct, setAddProduct] = useState(false)
+
+    const [addClass, setAddClass] =  useState("")
 
     const [quantity, setQuantity] = useState(1)
     const {addProductToCart} = useCrudCart()
@@ -35,6 +38,17 @@ const ProductIdInfo = ({ product }) => {
             productId: product.id
         }
         addProductToCart(data)
+
+        setAddProduct(true)
+
+        setAddClass("product__added-on")
+
+        setTimeout(() => {
+            setAddProduct(false)
+
+            setAddClass("")
+
+        }, 5000)
     }
 
 
@@ -71,9 +85,12 @@ const ProductIdInfo = ({ product }) => {
                     <button className='product__info-btn' onClick={handleMinus}>-</button>
                     <div className='product__info-quantity-number'>{quantity}</div>
                     <button className='product__info-btn' onClick={handlePlus} >+</button>
+
                 </div>
+                {addProduct &&  <p className={`product__added ${addClass}`}>Produc added in cart</p>}
 
                 <button onClick={handleAddToCart} className='product__btn-add' >Add to cart  <i className='bx bx-cart-add'></i></button>
+
 
 
 

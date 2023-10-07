@@ -154,9 +154,20 @@
 }
 
 
+.product__added{
+    background-color: green;
+    color: aliceblue;
+    position: absolute;
+    bottom: 30.8%;
+    right: -100%;
+    transform: translate(-50% -50%);
+    transition: right 3s ease; 
 
+}
 
-
+.product__added-on{
+    right: 0%;
+}
 
 
 

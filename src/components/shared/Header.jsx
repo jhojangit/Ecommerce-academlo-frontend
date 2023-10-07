@@ -2,17 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Cart from '../../pages/Cart'
 import "./header.css"
+import { useMenuState } from '../../store/menuState'
+
+
 
 const Header = () => {
 
-  const [isLog, setIsLog] = useState(localStorage.getItem("token"))
+  //const [isLog, setIsLog] = useState(localStorage.getItem("token"))
+
+  const stateStore = useMenuState( (state) => state.isLogStore)
 
 
   
-
   useEffect(() => {
-    setIsLog(localStorage.getItem("token"))
-  }, [isLog])
+    localStorage.getItem("token")
+  }, )
 
 
   return (
@@ -22,7 +26,7 @@ const Header = () => {
             <ul className='navbar__ul'>
 
               {
-                !isLog?
+                !stateStore?
                 <>
                   <li className='navbar__li'> <Link to="/">Home</Link>  </li>
                   <li className='navbar__li'> <Link to="/login">Login</Link>  </li>

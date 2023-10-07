@@ -1,16 +1,24 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./logOut.css"
+import { useMenuState } from '../store/menuState'
+
+
 
 
 const LogOut = () => {
 
     const navigate = useNavigate()
 
+    const stateStore = useMenuState( state => state.changeStateFalse)
+
+
+
+
     const handleExit = () => {
         localStorage.removeItem("token")
         navigate("/login")
-        window.location.reload(true)
+        stateStore()
     }
 
 

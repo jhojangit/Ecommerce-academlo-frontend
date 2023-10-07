@@ -37,8 +37,8 @@ const CardProducts = ({ product }) => {
         
         <article onClick={handleSelectProduct} className='product'>
             <header className='product__header'>
-                <img className='product__img product__img-1' src={product.images[0].url} alt="" />
-                <img className='product__img product__img-2' src={product.images[1].url} alt="" />
+                <img className='product__img product__img-1' src={product?.images[0].url} alt="" />
+                <img className='product__img product__img-2' src={product?.images[1].url} alt="" />
             </header>
             <section className='product__section'>
                 <h4 className='product__subtitle' >{product.brand}</h4>

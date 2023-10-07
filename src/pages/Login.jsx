@@ -3,6 +3,7 @@ import useAuthentication from '../hooks/useAuthentication'
 import "./login.css"
 import { Link, useNavigate } from 'react-router-dom'
 import Loading from '../components/loading/Loading'
+import { useMenuState } from '../store/menuState'
 
 
 
@@ -12,10 +13,15 @@ const Login = () => {
   const [load, setLoad] = useState(false);
 
   
+  const stateStore = useMenuState((state) => state.changeStateTrue)
 
   const { loginUser} = useAuthentication()
 
   const navigate =useNavigate()
+
+
+
+
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -26,25 +32,19 @@ const Login = () => {
     
     try {
       const send = await loginUser(data);
-      console.log(send);
       setLoad(false)
       setIsLog(true)
         
       navigate("/");
-      window.location.reload(true);
+      stateStore()
+      //window.location.reload(true);
 
 
     } catch (error) {
       console.error(error);
       setIsLog(true)
     }
-
-
   }
-
-
-
-
 
 
   return (
