@@ -67,7 +67,7 @@ const ProductIdInfo = ({ product }) => {
                 <SliderImgs product={product} />
             </div>
 
-            
+
 
             <h3 className='product__info-brand'>{product?.brand}</h3>
 

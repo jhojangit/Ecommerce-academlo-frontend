@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Cart from '../../pages/Cart'
 import "./header.css"
 import { useMenuState } from '../../store/menuState'
 
@@ -22,12 +21,12 @@ const Header = () => {
     }else{
       stateStoreFalse()
     }
-  }, )
+  }, [] )
 
 
   return (
     <header className='navbar'>
-        <h1 className='navbar__title'> <Link to="/" >e-commerce</Link></h1>
+        <h1 className='navbar__title'> <Link to="/" >Jhojan e-commerce</Link></h1>
         <nav className='navbar__ul-container'>
             <ul className='navbar__ul'>
 

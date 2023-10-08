@@ -59,11 +59,11 @@ const Login = () => {
 
             <div className='form__login-div'>
               <label className='form__login-label' htmlFor="email">Email</label>
-              <input className='form__login-input' type="email" id='email' />
+              <input className='form__login-input' type="email" id='email' required="true" />
             </div>
             <div className='form__login-div'>
               <label className='form__login-label' htmlFor="password">Password</label>
-              <input className='form__login-input' type="password" id='password' />
+              <input className='form__login-input' type="password" id='password' required="true" />
             </div>
             <button className='form__login-submit' type="submit">Sign in</button>
 
