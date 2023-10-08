@@ -67,7 +67,7 @@
 
 .product__info-slider {
     margin: 1rem;
-    margin-right: 0rem;
+    margin-right: 1rem;
 }
 
 .product__miga-span {
@@ -156,18 +156,20 @@
 
 .product__added{
     background-color: green;
+    margin-top: 144%;
+    margin-left: 20%;
+    font-size: 1.3rem;
     color: aliceblue;
     position: absolute;
-    bottom: 30.8%;
-    right: -100%;
-    transform: translate(-50% -50%);
+    align-self: center;
+    justify-self: center;
     transition: right 3s ease; 
-
+    border: transparent;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
-.product__added-on{
-    right: 0%;
-}
+
 
 
 
@@ -252,6 +254,22 @@
     .product__info-slider {
         margin: 1rem;
         margin-right: 5rem;
+    }
+
+
+    .product__added{
+        background-color: green;
+        font-size: 1.3rem;
+        margin-top: 40%;
+        margin-left: 40%;
+        color: aliceblue;
+        position: absolute;
+        align-self: center;
+        justify-self: center;
+        transition: right 3s ease; 
+        border: transparent;
+        border-radius: 1rem;
+        padding: 1rem;
     }
 
 }

@@ -72,7 +72,7 @@ const Cart = () => {
                     <footer className='cart__footer'>
                         <span className='cart__footer-label'>Total: </span>
 
-                        <h3 className='cart__footer-value'>{totalPriceCart}</h3>
+                        <h3 className='cart__footer-value'>{totalPriceCart?.toLocaleString('es-Co')}</h3>
 
                         <button onClick={handlePurchase} className='cart__btn'>Buy</button>
                     </footer>

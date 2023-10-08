@@ -8,14 +8,20 @@ import { useMenuState } from '../../store/menuState'
 
 const Header = () => {
 
-  //const [isLog, setIsLog] = useState(localStorage.getItem("token"))
 
   const stateStore = useMenuState( (state) => state.isLogStore)
 
+  const stateStoreTrue = useMenuState((state) => state.changeStateTrue)
+  const stateStoreFalse = useMenuState((state) => state.changeStateFalse)
 
-  
+
+
   useEffect(() => {
-    localStorage.getItem("token")
+    if(localStorage.getItem("token")){
+      stateStoreTrue()
+    }else{
+      stateStoreFalse()
+    }
   }, )
 
 

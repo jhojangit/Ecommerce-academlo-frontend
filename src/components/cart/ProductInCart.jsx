@@ -13,7 +13,7 @@ const ProductInCart = ({ prodCart }) => {
         deleteProductsFromCart(prodCart.id)
     }
     
-    
+    const productPrice = prodCart.product.price * prodCart.quantity
 
     return (
 
@@ -36,7 +36,7 @@ const ProductInCart = ({ prodCart }) => {
 
             <div className='prodcart__subtotal'>
                 <span className='prodcart__subtotal-label'>SubTotal</span>
-                <span className='prodcart__subtotal-value'>{prodCart.product.price * prodCart.quantity}</span>
+                <span className='prodcart__subtotal-value'>{productPrice?.toLocaleString('es-Co')}</span>
             </div>
 
             </footer>
